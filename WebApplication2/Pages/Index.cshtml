@@ -1,0 +1,45 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div class="row">
+    <div class="col-md-6 col-sm-12 mx-auto mb-5">
+        <form method="post">
+            <div class="mb-3">
+                <label class="form-label" asp-for="UserSignupInfo.Name"></label>
+                <input class="form-control" asp-for="UserSignupInfo.Name" />
+                <span class="form-text" asp-validation-for="UserSignupInfo.Name" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label" asp-for="UserSignupInfo.BagsOfChips"></label>
+                <input class="form-control" asp-for="UserSignupInfo.BagsOfChips" />
+                <span class="form-text" asp-validation-for="UserSignupInfo.BagsOfChips" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label" asp-for="UserSignupInfo.Email"></label>
+                <input class="form-control" asp-for="UserSignupInfo.Email" />
+                <span class="form-text" asp-validation-for="UserSignupInfo.Email" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label" asp-for="UserSignupInfo.DueDate"></label>
+                <input class="form-control" asp-for="UserSignupInfo.DueDate" />
+                <span class="form-text" asp-validation-for="UserSignupInfo.DueDate" />
+            </div>
+            <button type="submit" class="btn btn-outline-primary">Do the thing!</button>
+        </form>
+    </div>
+    <div class="col container">
+        <button class="btn btn-primary">Hello</button>
+    </div>
+</div>
+
+@section scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
